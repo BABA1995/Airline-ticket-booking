@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingDataService } from '../booking-data.service';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 interface Travel {
   viewValue: string;
@@ -29,7 +30,7 @@ export class BookingFormComponent implements OnInit {
 
 
 
-  constructor(private bookingDataService: BookingDataService) {
+  constructor(public bookingDataService: BookingDataService, private rout: Router) {
 
   }
 
@@ -61,7 +62,7 @@ export class BookingFormComponent implements OnInit {
       datepick: this.datepick.value
     }
     this.bookingDataService.data.push(book);
-
+    this.rout.navigate(['tickethistory'])
   }
 
 }

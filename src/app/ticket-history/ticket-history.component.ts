@@ -9,13 +9,13 @@ import { BookingDataService } from '../booking-data.service';
 })
 export class TicketHistoryComponent implements OnInit {
 
-  constructor(private bookingdata: BookingDataService) {
+  constructor(public bookingdata: BookingDataService) {
 
 
   }
-  public bookdata: any = [];
+  public bookdata: any =[]
   ngOnInit(): void {
-    this.bookdata = this.bookingdata.data;
+    this.bookdata = this.bookingdata.getData();
     console.log(this.bookdata);
   }
 

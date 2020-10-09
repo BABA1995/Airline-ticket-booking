@@ -4,6 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BookingDataService {
-public  data: any[];
+  public data: any[] = [];
   constructor() { }
+
+
+  getData() {
+    return this.data
+  }
 }
