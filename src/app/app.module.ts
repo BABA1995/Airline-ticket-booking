@@ -17,6 +17,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TicketHistoryComponent } from './ticket-history/ticket-history.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -39,8 +40,8 @@ import { TicketHistoryComponent } from './ticket-history/ticket-history.componen
     MatDatepickerModule, MatNativeDateModule,
     // MatMomentDateModule
     MatButtonModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
