@@ -7,13 +7,24 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookingFormComponent } from './booking-form/booking-form.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDividerModule } from '@angular/material/divider';
+import { CommonModule } from '@angular/common';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+// import { MatMomentDateModule } from '@angular/material-moment-adapter/core';
+import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TicketHistoryComponent } from './ticket-history/ticket-history.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BookingFormComponent
+    BookingFormComponent,
+    TicketHistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -21,8 +32,15 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatFormFieldModule,
+    MatInputModule,
     MatSelectModule,
-    MatInputModule
+    CommonModule,
+    MatDividerModule,
+    MatDatepickerModule, MatNativeDateModule,
+    // MatMomentDateModule
+    MatButtonModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
