@@ -15,7 +15,7 @@ export class TicketHistoryComponent implements OnInit {
 
 
   }
- 
+
   ngOnInit(): void {
     this.bookdata = this.bookingdata.getData();
     console.log(this.bookdata);
