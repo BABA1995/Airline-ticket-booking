@@ -17,6 +17,7 @@ interface Travel {
 export class BookingFormComponent implements OnInit {
   viewValue: String;
   scheduledTime: String;
+  flag:boolean;
   traveltype: Travel[] = [
     { viewValue: 'Arrival', number: '302', scheduledTime: '2017-12-11T01:06:00.000' },
     { viewValue: 'Departure', number: '303', scheduledTime: '2017-12-11T01:10:00.000' },
@@ -60,6 +61,8 @@ export class BookingFormComponent implements OnInit {
       selectvalue1: this.selectvalue1.value,
       selectvalue2: this.selectvalue2.value,
       datepick: this.datepick.value
+
+      
     }
     this.bookingDataService.data.push(book);
     this.rout.navigate(['tickethistory'])

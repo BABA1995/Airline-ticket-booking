@@ -18,6 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TicketHistoryComponent } from './ticket-history/ticket-history.component';
 import {MatTableModule} from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     MatSelectModule,
     CommonModule,
+    MatInputModule,
     MatDividerModule,
+    MatIconModule,
     MatDatepickerModule, MatNativeDateModule,
     // MatMomentDateModule
     MatButtonModule,
