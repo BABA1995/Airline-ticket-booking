@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingFormComponent } from '../booking-form/booking-form.component';
 import { BookingDataService } from '../booking-data.service';
-
+import { FormControl } from '@angular/forms';
 
 
 
@@ -14,6 +14,10 @@ export class TicketHistoryComponent implements OnInit {
   public bookdata: any =[]
   columnsToDisplay = ['index', 'name', 'selectvalue','selectvalue1','selectvalue2', 'datepick', 'delete'];
   dataSource = this.bookdata;
+  firstName = new FormControl('');
+  lastName = new FormControl('');
+  email = new FormControl('');
+  contact = new FormControl('');
   constructor(public bookingdata: BookingDataService) {
 
 
