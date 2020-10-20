@@ -54,7 +54,7 @@ export class BookingFormComponent implements OnInit {
 
   }
 
-  onSubmit() {
+  onBook() {
     let book = {
       name: this.name.value,
       selectvalue: this.selectvalue.value,

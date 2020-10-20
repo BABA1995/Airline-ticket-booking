@@ -30,9 +30,62 @@
   <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
   <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
 </table>
-<div>
+<br>
+<h1> Meet and Greet</h1>
   <mat-form-field appearance="fill">
     <mat-label>firstName</mat-label>
     <input   type="text" [formControl]="firstName" matInput #input maxlength="10" placeholder="Ex. Nougat">
   </mat-form-field>
-</div>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>lastName</mat-label>
+    <input   type="text" [formControl]="lastName" matInput #input maxlength="10" placeholder="Ex. Nougat">
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>email</mat-label>
+    <input   type="text" [formControl]="email" matInput #input maxlength="10" placeholder="Ex. Nougat">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>contact</mat-label>
+    <input   type="text" [formControl]="contact" matInput #input maxlength="10" placeholder="Ex. Nougat">
+  </mat-form-field>
+
+  <mat-form-field apperance="fill">
+  <mat-label>Meet Up time</mat-label>
+    <mat-select type="text" [formControl]= "selectvalue">
+      <mat-option *ngFor="let type of info" [value]="type.meetUp">
+        {{type.meetUp}}
+      </mat-option>
+    </mat-select>
+    </mat-form-field>
+    <label id="example-radio-group-label">Are you travelling Alone</label>
+    <mat-radio-group  aria-labelledby="example-radio-group-label" aria-label="Select an option">
+      <mat-radio-button value="1"> Yes</mat-radio-button>
+      <mat-radio-button value="2"> No</mat-radio-button>
+    </mat-radio-group>
+    <br>
+    <mat-form-field apperance="fill">
+      <mat-label>Number of Persons</mat-label>
+        <mat-select type="text" [formControl]= "totalmenber">
+          <mat-option *ngFor="let type of info" [value]="type.totalPerson">
+            {{type.totalPerson}}
+          </mat-option>
+        </mat-select>
+        </mat-form-field>
+<br>
+<mat-card >
+  <mat-card-header class="example-card">
+    <mat-card-title>
+      Price Summary
+    </mat-card-title>
+ 
+    <mat-card-content>
+      It's free
+    </mat-card-content>
+ 
+  </mat-card-header>
+</mat-card>
+<br>
+<button (click)='onSubmit()'  mat-raised-button>Submit</button>

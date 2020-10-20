@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BookingFormComponent } from './booking-form/booking-form.component';
 import { TicketHistoryComponent } from './ticket-history/ticket-history.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,11 @@ const routes: Routes = [
   },
   {
     path: "tickethistory", component: TicketHistoryComponent
+  },
+  {
+    path: "cart", component: CartComponent
   }
+
 ];
 
 @NgModule({

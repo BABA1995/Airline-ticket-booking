@@ -19,6 +19,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TicketHistoryComponent } from './ticket-history/ticket-history.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCardModule} from '@angular/material/card';
+import { CartComponent } from './cart/cart.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 
@@ -27,7 +31,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     HeaderComponent,
     BookingFormComponent,
-    TicketHistoryComponent
+    TicketHistoryComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,9 @@ import { MatIconModule } from '@angular/material/icon';
     // MatMomentDateModule
     MatButtonModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatRadioModule,MatCardModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

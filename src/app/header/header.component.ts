@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingDataService } from '../booking-data.service';
 
 
 @Component({
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+public badgeNumber:number;
+  constructor(public badgeCount: BookingDataService) { }
 
   ngOnInit(): void {
+   
   }
-
+  
 }

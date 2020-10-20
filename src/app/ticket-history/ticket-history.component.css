@@ -5,3 +5,6 @@ table {
   th {
     text-align: left;
   }
+  .example-card{
+    max-width: 200px;
+  }
